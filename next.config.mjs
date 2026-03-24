@@ -2,6 +2,7 @@ import { imageHosts } from './image-hosts.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',
 
@@ -14,18 +15,9 @@ const nextConfig = {
   },
 
   images: {
+    unoptimized: true,
     remotePatterns: imageHosts,
     minimumCacheTTL: 60,
   },
-
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/home-dashboard',
-        permanent: false,
-      },
-    ];
-  }
 };
 export default nextConfig;

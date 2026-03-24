@@ -143,13 +143,12 @@ export default function ContactContent() {
     setSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) throw new Error('Failed to send message');
+      // GitHub Pages is static, so we use a mailto link instead of an API route
+      const mailSubject = encodeURIComponent(`[${formData.type}] ${formData.subject}`);
+      const mailBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
+      
+      // Open the user's email client
+      window.location.href = `mailto:mgbohfrederick@mail.com?subject=${mailSubject}&body=${mailBody}`;
 
       setSubmitting(false);
       setSubmitted(true);
