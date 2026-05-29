@@ -24,6 +24,18 @@ import { motion } from 'framer-motion';
 const timelineItems = [
   {
     date: 'Present',
+    title: 'Data Scientist & ML Engineer (Self-Taught)',
+    subtitle: 'Machine Learning & API Development',
+    description:
+      'Building production-grade ML systems specializing in XGBoost classification models. Achieved 87% ROC-AUC on motor failure prediction and 84.46% ROC-AUC on customer churn projects. Deployed containerized REST APIs with FastAPI and Docker. Implemented probability calibration, hyperparameter tuning with RandomizedSearchCV, and production-ready systems.',
+    tags: ['Machine Learning', 'XGBoost', 'FastAPI', 'Docker', 'Model Deployment', 'API Development'],
+    icon: Flame,
+    iconColor: 'text-rose-400',
+    iconBg: 'bg-rose-400/10',
+    current: true,
+  },
+  {
+    date: 'Present',
     title: 'Data Cleaning & Analytics Specialist',
     subtitle: 'Afrilance — Software Engineering',
     description:
@@ -85,12 +97,12 @@ const certifications = [
 ];
 
 const interests = [
-  { label: 'Data Analytics', icon: Trophy, color: 'text-amber-400', bg: 'bg-amber-400/10', note: 'Cleaning and analyzing datasets for insights' },
-  { label: 'Open Source', icon: Code2, color: 'text-cyan-400', bg: 'bg-cyan-400/10', note: 'Contributing to Python data utilities' },
+  { label: 'Machine Learning', icon: Trophy, color: 'text-rose-400', bg: 'bg-rose-400/10', note: 'XGBoost, model calibration, production ML systems' },
+  { label: 'Data Science', icon: Trophy, color: 'text-amber-400', bg: 'bg-amber-400/10', note: 'Cleaning, analysis, and feature engineering for ML' },
+  { label: 'API Development', icon: Code2, color: 'text-teal-400', bg: 'bg-teal-400/10', note: 'FastAPI, REST services, production deployments' },
+  { label: 'Open Source', icon: Code2, color: 'text-cyan-400', bg: 'bg-cyan-400/10', note: 'Contributing to Python data science utilities' },
   { label: 'Telecommunications', icon: Wrench, color: 'text-purple-400', bg: 'bg-purple-400/10', note: 'Broadcast systems and network infrastructure' },
-  { label: 'Volunteer Work', icon: Heart, color: 'text-pink-400', bg: 'bg-pink-400/10', note: 'WORFAF — Women and Orphans Rights to Family Assets Foundation (2024)' },
-  { label: 'Continuous Learning', icon: BookOpen, color: 'text-blue-400', bg: 'bg-blue-400/10', note: 'Expanding skills in Python, SQL, and data science' },
-  { label: 'System Troubleshooting', icon: Flame, color: 'text-rose-400', bg: 'bg-rose-400/10', note: 'Diagnosing and resolving technical faults efficiently' },
+  { label: 'Continuous Learning', icon: BookOpen, color: 'text-blue-400', bg: 'bg-blue-400/10', note: 'Deep learning, advanced ML techniques, cloud deployment' },
 ];
 
 const profileStats = [

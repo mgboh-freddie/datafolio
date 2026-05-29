@@ -134,32 +134,42 @@ const learningRoadmap = [
 {
   phase: '06',
   title: 'Machine Learning',
-  status: 'exploring',
+  status: 'mastered',
   emoji: '🤖',
-  desc: 'Scikit-learn, regression, classification, clustering — teaching machines to learn',
+  desc: 'XGBoost, hyperparameter tuning, probability calibration, production ML APIs',
   color: 'rose',
-  tools: ['Scikit-learn', 'Regression', 'Clustering']
+  tools: ['XGBoost', 'Scikit-learn', 'FastAPI']
+},
+{
+  phase: '07',
+  title: 'ML Deployment & APIs',
+  status: 'mastered',
+  emoji: '🚀',
+  desc: 'FastAPI, Docker containerization, REST APIs, production-ready ML systems',
+  color: 'cyan',
+  tools: ['FastAPI', 'Docker', 'Pydantic']
 }];
 
 
 const concepts = [
-{ name: 'Data Cleaning', level: 88, emoji: '🧹', color: 'bg-emerald-400' },
-{ name: 'Python / Pandas', level: 78, emoji: '🐍', color: 'bg-yellow-400' },
-{ name: 'SQL Queries', level: 75, emoji: '🗄️', color: 'bg-cyan-400' },
-{ name: 'Data Visualization', level: 55, emoji: '📊', color: 'bg-purple-400' },
-{ name: 'Statistical Analysis', level: 50, emoji: '📐', color: 'bg-blue-400' },
-{ name: 'Machine Learning', level: 30, emoji: '🤖', color: 'bg-rose-400' }];
+{ name: 'Data Cleaning', level: 92, emoji: '🧹', color: 'bg-emerald-400' },
+{ name: 'Python / Pandas', level: 85, emoji: '🐍', color: 'bg-yellow-400' },
+{ name: 'SQL Queries', level: 80, emoji: '🗄️', color: 'bg-cyan-400' },
+{ name: 'Machine Learning', level: 82, emoji: '🤖', color: 'bg-rose-400' },
+{ name: 'XGBoost / Scikit-learn', level: 80, emoji: '⚙️', color: 'bg-amber-400' },
+{ name: 'API Development (FastAPI)', level: 78, emoji: '🔌', color: 'bg-blue-400' },
+{ name: 'Data Visualization', level: 65, emoji: '📊', color: 'bg-purple-400' }];
 
 
 const dsTools = [
 { name: 'Python', icon: '🐍', category: 'Language', color: 'from-yellow-400/20 to-yellow-400/5 border-yellow-400/30', textColor: 'text-yellow-400' },
 { name: 'Pandas', icon: '🐼', category: 'Data Wrangling', color: 'from-blue-400/20 to-blue-400/5 border-blue-400/30', textColor: 'text-blue-400' },
 { name: 'NumPy', icon: '🔢', category: 'Computation', color: 'from-cyan-400/20 to-cyan-400/5 border-cyan-400/30', textColor: 'text-cyan-400' },
-{ name: 'Matplotlib', icon: '📈', category: 'Visualization', color: 'from-purple-400/20 to-purple-400/5 border-purple-400/30', textColor: 'text-purple-400' },
-{ name: 'Seaborn', icon: '🎨', category: 'Visualization', color: 'from-pink-400/20 to-pink-400/5 border-pink-400/30', textColor: 'text-pink-400' },
+{ name: 'Scikit-learn', icon: '🎯', category: 'ML Library', color: 'from-rose-400/20 to-rose-400/5 border-rose-400/30', textColor: 'text-rose-400' },
+{ name: 'XGBoost', icon: '🏆', category: 'ML Algorithm', color: 'from-amber-400/20 to-amber-400/5 border-amber-400/30', textColor: 'text-amber-400' },
+{ name: 'FastAPI', icon: '⚡', category: 'API Framework', color: 'from-teal-400/20 to-teal-400/5 border-teal-400/30', textColor: 'text-teal-400' },
+{ name: 'Docker', icon: '🐳', category: 'Containerization', color: 'from-blue-500/20 to-blue-500/5 border-blue-500/30', textColor: 'text-blue-500' },
 { name: 'SQL', icon: '🗄️', category: 'Database', color: 'from-emerald-400/20 to-emerald-400/5 border-emerald-400/30', textColor: 'text-emerald-400' },
-{ name: 'Jupyter', icon: '📓', category: 'Environment', color: 'from-orange-400/20 to-orange-400/5 border-orange-400/30', textColor: 'text-orange-400' },
-{ name: 'Scikit-learn', icon: '🤖', category: 'ML', color: 'from-rose-400/20 to-rose-400/5 border-rose-400/30', textColor: 'text-rose-400' },
 { name: 'Git', icon: '🌿', category: 'Version Control', color: 'from-zinc-400/20 to-zinc-400/5 border-zinc-400/30', textColor: 'text-zinc-300' }];
 
 
@@ -169,7 +179,9 @@ const milestones = [
 { emoji: '🏆', text: 'Built first SQL pipeline analyzing INEC election data', date: 'Jun 2024' },
 { emoji: '🐍', text: 'Wrote first Python script to process CSV files end-to-end', date: 'Aug 2024' },
 { emoji: '📊', text: 'Created first data visualization dashboard for stakeholders', date: 'Oct 2024' },
-{ emoji: '🚀', text: 'Started exploring ML concepts — regression & classification', date: 'Jan 2025' }];
+{ emoji: '🤖', text: 'Built Motor Failure Prediction API — 87% ROC-AUC with XGBoost', date: 'Mar 2025' },
+{ emoji: '🎯', text: 'Deployed Customer Churn Prediction API — 84.46% ROC-AUC with FastAPI', date: 'Apr 2025' },
+{ emoji: '🚀', text: 'Containerized ML models with Docker for production deployment', date: 'May 2025' }];
 
 
 const colorMap: Record<string, {bg: string;border: string;text: string;badge: string;}> = {
@@ -243,10 +255,10 @@ export default function DataScienceContent() {
             </div>
 
             <p className="text-zinc-400 text-sm leading-relaxed max-w-lg animate-stagger-3">
-              I&apos;m a self-taught data enthusiast who started with Excel pivot tables and is now
-              diving deep into Python, Pandas, SQL, and machine learning. Every dataset is a puzzle,
-              and I love solving them. This page documents my honest, messy, wonderful journey.
-            </p>
+              I&apos;m a self-taught data enthusiast who started with Excel pivot tables and progressed to building
+              production-grade ML APIs. Specialized in XGBoost models with 87% accuracy, probability calibration,
+              and containerized deployments. Every dataset is a puzzle, and I love solving them. This page documents my
+              honest, messy, wonderful journey from data cleaning to machine learning.
 
             <div className="flex flex-wrap gap-3 animate-stagger-4">
               <Link

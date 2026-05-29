@@ -5,13 +5,7 @@ import Icon from '@/components/ui/AppIcon';
 
 
 const activities = [
-  {
-    icon: GitCommit,
-    color: 'text-cyan-400',
-    bg: 'bg-cyan-400/10',
-    text: 'Automated data workflows using Python and SQL at Afrilance',
-    time: 'Recent',
-  },
+ 
   {
     icon: Wrench,
     color: 'text-emerald-400',

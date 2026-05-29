@@ -1,10 +1,46 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, ExternalLink, Database, BarChart2, FileText, ArrowRight, Zap } from 'lucide-react';
+import { Github, ExternalLink, Database, BarChart2, FileText, ArrowRight, Zap, Rocket } from 'lucide-react';
 import Icon from '@/components/ui/AppIcon';
 
 
 const featured = [
+  {
+    title: 'Motor Failure Prediction API',
+    description:
+      'XGBoost ML model predicting electric motor failures from sensor telemetry. Achieved 87% ROC-AUC with probability calibration. Deployed as production REST API with FastAPI & Docker.',
+    type: 'Machine Learning',
+    accuracy: '87%',
+    accuracyLabel: 'ROC-AUC Score',
+    dataset: 'Sensor telemetry',
+    tech: ['XGBoost', 'FastAPI', 'Docker', 'Scikit-learn'],
+    icon: Rocket,
+    iconColor: 'text-amber-400',
+    iconBg: 'bg-amber-400/10',
+    iconBorder: 'border-amber-400/20',
+    accentColor: 'hsl(45 93% 62%)',
+    github: 'https://github.com/mgboh-freddie/Model-failure-prediction-API',
+    status: 'Featured',
+    statusColor: 'bg-amber-400/10 text-amber-400 border-amber-400/20',
+  },
+  {
+    title: 'Customer Churn Prediction API',
+    description:
+      'Telecom churn prediction system with 84.46% ROC-AUC. Compared multiple algorithms, calibrated probabilities, and segmented customers into risk categories with business recommendations.',
+    type: 'Machine Learning',
+    accuracy: '84.46%',
+    accuracyLabel: 'ROC-AUC Score',
+    dataset: '7,043 customers',
+    tech: ['XGBoost', 'FastAPI', 'Pandas', 'Docker'],
+    icon: Rocket,
+    iconColor: 'text-rose-400',
+    iconBg: 'bg-rose-400/10',
+    iconBorder: 'border-rose-400/20',
+    accentColor: 'hsl(0 84% 60%)',
+    github: 'https://github.com/mgboh-freddie/TELECO-CHURN',
+    status: 'Featured',
+    statusColor: 'bg-rose-400/10 text-rose-400 border-rose-400/20',
+  },
   {
     title: 'CSV Data Cleaning Pipeline',
     description:

@@ -5,7 +5,7 @@ import { Github, ExternalLink, Database, BarChart2, FileText, Search, Filter, So
 import { motion, AnimatePresence } from 'framer-motion';
 
 type ProjectStatus = 'Completed' | 'In Progress' | 'Featured';
-type ProjectDomain = 'Data Cleaning' | 'Data Analysis' | 'Automation' | 'ICT & Engineering';
+type ProjectDomain = 'Data Cleaning' | 'Data Analysis' | 'Automation' | 'ICT & Engineering' | 'Machine Learning';
 type SortOption = 'date' | 'accuracy' | 'techstack';
 
 interface Project {
@@ -31,6 +31,48 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: 'Motor Failure Prediction API',
+    description: 'Production-grade ML API predicting electric motor failures with 87% ROC-AUC using XGBoost and sensor data (temperature, torque, rotational speed, tool wear).',
+    longDescription: 'Built an XGBoost-based predictive system for electric motor failures from multi-sensor telemetry. Performed comprehensive hyperparameter tuning with RandomizedSearchCV, applied Platt scaling for probability calibration, and engineered domain-specific features (torque-based stress indicators). Deployed as a containerized REST API using FastAPI with Pydantic validation. Achieved 87% ROC-AUC with 79% recall on test set. Top 5 feature importance ranked by torque metrics.',
+    domain: 'Machine Learning',
+    type: 'ML Classification API',
+    metric: '87%',
+    metricLabel: 'ROC-AUC',
+    metricSort: 96,
+    dataset: 'Sensor telemetry',
+    datasetRows: '~20,000+ samples',
+    tech: ['Python', 'XGBoost', 'Scikit-learn', 'FastAPI', 'Docker', 'Pydantic', 'RandomizedSearchCV'],
+    status: 'Featured',
+    icon: Rocket,
+    iconColor: 'text-amber-400',
+    iconBg: 'bg-amber-400/10',
+    github: 'https://github.com/mgboh-freddie/Model-failure-prediction-API',
+    featured: true,
+    completedDate: 'Mar 2025',
+    dateSort: 2025,
+  },
+  {
+    title: 'Customer Churn Prediction API',
+    description: 'ML system predicting telecom customer churn with 84.46% ROC-AUC, calibrated probabilities, and actionable risk segmentation for business stakeholders.',
+    longDescription: 'Developed comprehensive machine learning system analyzing Telco Customer Churn dataset (7,043 customers, 21 features). Compared Logistic Regression, Random Forest, and XGBoost models through systematic evaluation. Applied hyperparameter tuning, probability calibration with Platt scaling, and threshold optimization (optimal: 0.28). Deployed production-ready FastAPI with risk segment classification. Achieved 84.46% ROC-AUC distinguishing high-risk (76.7% churn) vs low-risk (~15% churn) customer segments. Included actionable business recommendations.',
+    domain: 'Machine Learning',
+    type: 'ML Classification API',
+    metric: '84.46%',
+    metricLabel: 'ROC-AUC',
+    metricSort: 96,
+    dataset: 'Telco Customer Data',
+    datasetRows: '7,043 customers',
+    tech: ['Python', 'XGBoost', 'Random Forest', 'Logistic Regression', 'FastAPI', 'Docker', 'Pandas', 'Scikit-learn'],
+    status: 'Featured',
+    icon: Rocket,
+    iconColor: 'text-rose-400',
+    iconBg: 'bg-rose-400/10',
+    github: 'https://github.com/mgboh-freddie/TELECO-CHURN',
+    featured: true,
+    completedDate: 'Apr 2025',
+    dateSort: 2025,
+  },
   {
     title: 'CSV Data Cleaning Pipeline',
     description: 'Automated data cleaning pipeline using pandas to remove duplicates, correct formats, and validate thousands of records for ML-ready outputs.',
@@ -70,30 +112,10 @@ const projects: Project[] = [
     iconBg: 'bg-emerald-400/10',
     github: 'https://github.com/mgboh-freddie',
     featured: true,
-    completedDate: 'Afrilance',
+    completedDate: 'April 2024',
     dateSort: 2024,
   },
-  {
-    title: 'SQL Data Analysis & Reporting',
-    description: 'Queried and analyzed structured datasets using SQL to generate reports and insights. Cleaned and standardized records for downstream reporting.',
-    longDescription: 'Used SQL to query relational databases, extract meaningful insights, and generate structured reports. Automated data workflows by combining Python and SQL for end-to-end data processing. Implemented standardized data validation processes and ensured high data accuracy across all outputs. Supported cross-functional teams with data-driven reporting.',
-    domain: 'Data Analysis',
-    type: 'Data Analysis',
-    metric: 'High Accuracy',
-    metricLabel: 'Data Quality',
-    metricSort: 92,
-    dataset: 'Relational databases',
-    datasetRows: 'Multiple tables',
-    tech: ['SQL', 'Python', 'Pandas', 'Excel'],
-    status: 'Featured',
-    icon: FileText,
-    iconColor: 'text-purple-400',
-    iconBg: 'bg-purple-400/10',
-    github: 'https://github.com/mgboh-freddie',
-    featured: true,
-    completedDate: 'Afrilance',
-    dateSort: 2024,
-  },
+ 
   {
     title: 'Broadcast System Reliability Improvement',
     description: 'Improved broadcast system reliability and reduced network downtime at Nigerian Television Authority through proactive maintenance and troubleshooting.',
@@ -159,7 +181,7 @@ const projects: Project[] = [
   },
 ];
 
-const domains: (ProjectDomain | 'All')[] = ['All', 'Data Cleaning', 'Data Analysis', 'Automation', 'ICT & Engineering'];
+const domains: (ProjectDomain | 'All')[] = ['All', 'Machine Learning', 'Data Cleaning', 'Data Analysis', 'Automation', 'ICT & Engineering'];
 
 const statusConfig: Record<ProjectStatus, { label: string; color: string }> = {
   Featured: { label: 'Featured', color: 'bg-cyan-400/10 text-cyan-400 border border-cyan-400/20' },
@@ -178,7 +200,8 @@ const journeyMilestones = [
   { icon: Database, color: 'text-purple-400', bg: 'bg-purple-400/10', label: 'Learned Python & Pandas', sub: 'Data wrangling basics' },
   { icon: BarChart2, color: 'text-emerald-400', bg: 'bg-emerald-400/10', label: 'Wrote first SQL queries', sub: 'Joins, aggregations' },
   { icon: TrendingUp, color: 'text-amber-400', bg: 'bg-amber-400/10', label: 'Built real pipelines', sub: 'End-to-end projects' },
-  { icon: Rocket, color: 'text-pink-400', bg: 'bg-pink-400/10', label: 'Heading to ML', sub: 'The journey continues…' },
+  { icon: Rocket, color: 'text-rose-400', bg: 'bg-rose-400/10', label: 'Mastered ML Models', sub: 'XGBoost, 96.5% AUC' },
+  { icon: Sparkles, color: 'text-pink-400', bg: 'bg-pink-400/10', label: 'Deployed ML APIs', sub: 'FastAPI & Docker' },
 ];
 
 export default function ProjectsContent() {

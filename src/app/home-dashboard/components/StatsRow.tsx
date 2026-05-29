@@ -17,17 +17,6 @@ const stats = [
     trendUp: true,
   },
   {
-    label: 'Efficiency Improved',
-    value: '30%',
-    sub: 'At Afrilance via automation',
-    icon: TrendingUp,
-    color: 'text-emerald-400',
-    bg: 'bg-emerald-400/10',
-    border: 'border-emerald-400/20',
-    trend: 'Quantified impact',
-    trendUp: true,
-  },
-  {
     label: 'Datasets Cleaned',
     value: '10+',
     sub: 'Large CSV & Excel files',

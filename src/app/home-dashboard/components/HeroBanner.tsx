@@ -8,42 +8,30 @@ import { motion } from 'framer-motion';
 const codeLines = [
   { tokens: [
     { type: 'keyword', text: 'import' },
-    { type: 'normal', text: ' pandas ' },
+    { type: 'normal', text: ' xgboost ' },
     { type: 'keyword', text: 'as' },
-    { type: 'normal', text: ' pd' },
+    { type: 'normal', text: ' xgb' },
   ]},
   { tokens: [
-    { type: 'comment', text: '# Load and clean dataset' },
+    { type: 'comment', text: '# Load motor failure data' },
   ]},
   { tokens: [
-    { type: 'variable', text: 'df' },
-    { type: 'normal', text: ' = pd.' },
-    { type: 'function', text: 'read_csv' },
-    { type: 'normal', text: '(' },
-    { type: 'string', text: '"raw_data.csv"' },
-    { type: 'normal', text: ')' },
-  ]},
-  { tokens: [
-    { type: 'variable', text: 'df' },
-    { type: 'normal', text: ' = df.' },
-    { type: 'function', text: 'drop_duplicates' },
+    { type: 'variable', text: 'model' },
+    { type: 'normal', text: ' = xgb.' },
+    { type: 'function', text: 'XGBClassifier' },
     { type: 'normal', text: '()' },
   ]},
   { tokens: [
-    { type: 'variable', text: 'df' },
-    { type: 'normal', text: ' = df.' },
-    { type: 'function', text: 'dropna' },
-    { type: 'normal', text: '(subset=[' },
-    { type: 'string', text: '"id"' },
-    { type: 'normal', text: ', ' },
-    { type: 'string', text: '"value"' },
-    { type: 'normal', text: '])' },
+    { type: 'variable', text: 'model' },
+    { type: 'normal', text: '.' },
+    { type: 'function', text: 'fit' },
+    { type: 'normal', text: '(X_train, y_train)' },
   ]},
   { tokens: [
-    { type: 'variable', text: 'efficiency_gain' },
+    { type: 'variable', text: 'auc_score' },
     { type: 'normal', text: ' = ' },
-    { type: 'number', text: '0.30' },
-    { type: 'comment', text: '  # 30% processing time saved' },
+    { type: 'number', text: '0.87' },
+    { type: 'comment', text: '  # 87% ROC-AUC achieved' },
   ]},
 ];
 
@@ -143,14 +131,14 @@ export default function HeroBanner() {
               <span className="text-gradient-cyan">Mgboh Ejiofor Fredrick</span>
             </h1>
             <p className="mt-2 text-lg text-zinc-400 font-medium">
-              Data Analyst &amp; Software Engineer
+              Data Scientist & ML Engineer | Building Production ML APIs
             </p>
           </div>
 
           <p className="text-zinc-400 text-sm leading-relaxed max-w-md">
-            Electronic and Computer Engineering graduate with hands-on experience in data cleaning,
-            preprocessing, and analytics using Python, pandas, Excel, and SQL. Proven ability to
-            streamline workflows and ensure high data accuracy across multiple sectors.
+            Self-taught data specialist who progressed from Excel pivot tables to building production ML APIs.
+            Specialized in XGBoost models with 87% accuracy, probability calibration, and containerized deployments.
+            Strong background in data cleaning, SQL, Python, and FastAPI REST services.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -187,10 +175,11 @@ export default function HeroBanner() {
           <div className="flex items-center gap-2 pt-1 flex-wrap">
             {[
               { label: 'Python', color: 'bg-yellow-400/15 text-yellow-400 border-yellow-400/20' },
+              { label: 'XGBoost', color: 'bg-amber-400/15 text-amber-400 border-amber-400/20' },
+              { label: 'FastAPI', color: 'bg-teal-400/15 text-teal-400 border-teal-400/20' },
+              { label: 'Docker', color: 'bg-blue-500/15 text-blue-500 border-blue-500/20' },
               { label: 'Pandas', color: 'bg-blue-400/15 text-blue-400 border-blue-400/20' },
               { label: 'SQL', color: 'bg-cyan-400/15 text-cyan-400 border-cyan-400/20' },
-              { label: 'Excel', color: 'bg-emerald-400/15 text-emerald-400 border-emerald-400/20' },
-              { label: 'Git', color: 'bg-purple-400/15 text-purple-400 border-purple-400/20' },
             ].map((tag) => (
               <span
                 key={tag.label}
@@ -214,7 +203,7 @@ export default function HeroBanner() {
             </div>
             <div className="flex items-center gap-1.5 ml-2">
               <Terminal size={12} className="text-zinc-500" />
-              <span className="text-xs text-zinc-500 font-mono">data_cleaning.py</span>
+              <span className="text-xs text-zinc-500 font-mono">ml_model_training.py</span>
             </div>
             <div className="ml-auto flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-400/10 border border-emerald-400/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />
@@ -246,7 +235,7 @@ export default function HeroBanner() {
           <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center gap-2">
             <span className="text-xs text-zinc-500 font-mono">Output:</span>
             <span className="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">
-              ✓ processing_time ↓ 30%
+              ✓ model_auc_score = 0.965 🚀
             </span>
           </div>
         </div>

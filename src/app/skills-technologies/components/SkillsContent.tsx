@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, Radar, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
-import { Code2, Wrench, BarChart2, Database, ArrowRight, CheckCircle, Clock, Target } from 'lucide-react';
+import { Code2, Wrench, BarChart2, Database, ArrowRight, CheckCircle, Clock, Target, Rocket } from 'lucide-react';
 import Icon from '@/components/ui/AppIcon';
 
 
@@ -41,13 +41,13 @@ const skillCategories: SkillCategory[] = [
     iconColor: 'text-yellow-400',
     iconBg: 'bg-yellow-400/10',
     accentColor: 'hsl(48 96% 60%)',
-    overall: 75,
+    overall: 82,
     tools: [
-      { name: 'Python 3.x', months: 18, proficiency: 'Comfortable', note: 'Core language, scripting, automation, OOP basics' },
+      { name: 'Python 3.x', months: 18, proficiency: 'Proficient', note: 'Core language, scripting, automation, OOP, ML implementations' },
       { name: 'Pandas', months: 16, proficiency: 'Proficient', note: 'DataFrame ops, groupby, merge, data cleaning pipelines' },
-      { name: 'NumPy', months: 14, proficiency: 'Comfortable', note: 'Array operations, numerical computing' },
+      { name: 'NumPy', months: 14, proficiency: 'Comfortable', note: 'Array operations, numerical computing for ML' },
       { name: 'Git / GitHub', months: 12, proficiency: 'Comfortable', note: 'Branches, commits, pull requests, GitHub workflow' },
-      { name: 'Data Cleaning', months: 18, proficiency: 'Proficient', note: 'Removing duplicates, correcting formats, validating records' },
+      { name: 'Data Cleaning', months: 18, proficiency: 'Proficient', note: 'Removing duplicates, correcting formats, ML-ready data' },
       { name: 'Data Validation', months: 16, proficiency: 'Proficient', note: 'Standardized validation processes, accuracy checks' },
     ],
   },
@@ -81,19 +81,34 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: 'ict',
-    label: 'ICT & Engineering',
-    icon: Wrench,
-    iconColor: 'text-purple-400',
-    iconBg: 'bg-purple-400/10',
-    accentColor: 'hsl(270 60% 65%)',
-    overall: 82,
+    id: 'ml',
+    label: 'Machine Learning',
+    icon: Code2,
+    iconColor: 'text-rose-400',
+    iconBg: 'bg-rose-400/10',
+    accentColor: 'hsl(0 84% 60%)',
+    overall: 78,
     tools: [
-      { name: 'System Troubleshooting', months: 36, proficiency: 'Proficient', note: 'Diagnosing and resolving hardware/software faults' },
-      { name: 'Networking', months: 30, proficiency: 'Proficient', note: 'Network configuration, maintenance, and diagnostics' },
-      { name: 'Hardware Support', months: 36, proficiency: 'Proficient', note: 'Installation, configuration, and maintenance of hardware' },
-      { name: 'Telecommunications', months: 24, proficiency: 'Comfortable', note: 'Broadcast systems, infrastructure maintenance, NTA' },
-      { name: 'Cross-functional Collaboration', months: 36, proficiency: 'Proficient', note: 'Working with developers, engineers, and stakeholders' },
+      { name: 'XGBoost', months: 8, proficiency: 'Proficient', note: 'Model training, hyperparameter tuning, probability calibration' },
+      { name: 'Scikit-learn', months: 10, proficiency: 'Comfortable', note: 'Classification, regression, preprocessing, model evaluation' },
+      { name: 'Model Evaluation', months: 8, proficiency: 'Proficient', note: '87% AUC, confusion matrix, threshold optimization' },
+      { name: 'Feature Engineering', months: 8, proficiency: 'Comfortable', note: 'Domain-specific features, feature importance analysis' },
+      { name: 'Probability Calibration', months: 6, proficiency: 'Comfortable', note: 'Platt scaling, risk segmentation, actionable predictions' },
+    ],
+  },
+  {
+    id: 'deployment',
+    label: 'API & Deployment',
+    icon: Rocket,
+    iconColor: 'text-teal-400',
+    iconBg: 'bg-teal-400/10',
+    accentColor: 'hsl(162 72% 50%)',
+    overall: 65,
+    tools: [
+      { name: 'FastAPI', months: 6, proficiency: 'Learning', note: 'New to FastAPI, building async API skills and validation' },
+      { name: 'Docker', months: 6, proficiency: 'Comfortable', note: 'Container creation, image optimization, deployment' },
+      { name: 'Pydantic', months: 6, proficiency: 'Comfortable', note: 'Data validation, schema definition, error handling' },
+      { name: 'REST API Design', months: 6, proficiency: 'Comfortable', note: 'Endpoint design, error responses, best practices' },
     ],
   },
 ];
