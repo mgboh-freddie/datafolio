@@ -80,7 +80,7 @@ const faqItems = [
   {
     question: 'Are you available for full-time roles?',
     answer:
-      'Yes — I\'m actively looking for data analyst, data engineering, or software engineering roles. I\'m based in Enugu, Nigeria and open to remote opportunities. My availability is immediate.',
+      'Yes. I\'m actively looking for data analyst, data engineering, or software engineering roles. I\'m based in Enugu, Nigeria and open to remote opportunities. My availability is immediate.',
   },
   {
     question: 'Are you open to freelance or contract work?',
@@ -95,7 +95,7 @@ const faqItems = [
   {
     question: 'What is your technical background?',
     answer:
-      'I hold a B.Eng. in Electronic and Computer Engineering from the University of Nigeria, Nsukka (2017–2023). I have hands-on experience with Python, pandas, SQL, Excel, Git, networking, and hardware/software support.',
+      'I hold a B.Eng. in Electronic and Computer Engineering from the University of Nigeria, Nsukka (2017-2023). I have hands-on experience with Python, pandas, SQL, Excel, Git, networking, and hardware/software support. I am still learning SQL and continue to grow my database skills.',
   },
   {
     question: 'What\'s your preferred tech stack?',
@@ -166,7 +166,7 @@ export default function ContactContent() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-white">Contact &amp; Resume</h1>
         <p className="text-sm text-zinc-400 mt-1">
-          Let&apos;s connect — whether it&apos;s a job, collaboration, or just a chat about data
+          Let&apos;s connect, whether it&apos;s a job, collaboration, or just a chat about data
         </p>
       </div>
 
@@ -419,7 +419,7 @@ export default function ContactContent() {
               >
                 mgbohfrederick@mail.com
               </a>
-              {' '}— I check it every morning and respond same day for job inquiries.
+                {' '}. I check it every morning and respond same day for job inquiries.
             </p>
           </div>
         </div>

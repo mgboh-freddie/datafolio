@@ -28,7 +28,7 @@ interface WorkSample {
 const samples: WorkSample[] = [
   {
     id: 'data-cleaning',
-    title: 'CSV Data Cleaning — Pandas Pipeline',
+    title: 'CSV Data Cleaning with Pandas Pipeline',
     project: 'CSV Data Cleaning Pipeline',
     description: 'Automated data cleaning pipeline removing duplicates, fixing formats, and validating records.',
     tab: 'code',
@@ -69,8 +69,8 @@ const samples: WorkSample[] = [
       { group: 'Clean Rate', rate: 0.97 },
     ],
     analysisPoints: [
-      'Duplicate removal is the first step — even a small percentage of duplicates can skew aggregations and counts significantly.',
-      'Dropping rows with missing primary keys (id, name) is safer than imputing — these records cannot be reliably identified.',
+      'Duplicate removal is the first step. Even a small percentage of duplicates can skew aggregations and counts significantly.',
+      'Dropping rows with missing primary keys (id, name) is safer than imputing. These records cannot be reliably identified.',
       'Median imputation for numeric columns is preferred over mean when outliers are present, as it is more robust.',
       'String standardization (strip + title case) prevents groupby mismatches caused by leading/trailing spaces or inconsistent casing.',
       'Date coercion with errors="coerce" converts unparseable dates to NaT rather than raising exceptions, allowing downstream filtering.',
@@ -220,7 +220,7 @@ export default function WorkSamplesContent() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-white">Work Samples</h1>
         <p className="text-sm text-zinc-400 mt-1">
-          Real code, real outputs, real analysis — from actual project work
+          Real code, real outputs, real analysis from actual project work
         </p>
       </div>
 

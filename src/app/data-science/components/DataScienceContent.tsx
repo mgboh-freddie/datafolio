@@ -100,7 +100,7 @@ const learningRoadmap = [
   title: 'Python Fundamentals',
   status: 'mastered',
   emoji: '🐍',
-  desc: 'Variables, loops, functions, file I/O, OOP basics — the foundation of everything',
+  desc: 'Variables, loops, functions, file I/O, OOP basics - the foundation of everything',
   color: 'yellow',
   tools: ['Python 3', 'VS Code', 'Jupyter']
 },
@@ -127,7 +127,7 @@ const learningRoadmap = [
   title: 'Data Visualization',
   status: 'learning',
   emoji: '📈',
-  desc: 'Matplotlib, Seaborn, Plotly — turning raw numbers into compelling visual stories',
+  desc: 'Matplotlib, Seaborn, Plotly, turning raw numbers into compelling visual stories',
   color: 'purple',
   tools: ['Matplotlib', 'Seaborn', 'Plotly']
 },
@@ -154,7 +154,7 @@ const learningRoadmap = [
 const concepts = [
 { name: 'Data Cleaning', level: 92, emoji: '🧹', color: 'bg-emerald-400' },
 { name: 'Python / Pandas', level: 85, emoji: '🐍', color: 'bg-yellow-400' },
-{ name: 'SQL Queries', level: 80, emoji: '🗄️', color: 'bg-cyan-400' },
+{ name: 'SQL Queries', level: 65, emoji: '🗄️', color: 'bg-cyan-400' },
 { name: 'Machine Learning', level: 82, emoji: '🤖', color: 'bg-rose-400' },
 { name: 'XGBoost / Scikit-learn', level: 80, emoji: '⚙️', color: 'bg-amber-400' },
 { name: 'API Development (FastAPI)', level: 78, emoji: '🔌', color: 'bg-blue-400' },
@@ -174,13 +174,13 @@ const dsTools = [
 
 
 const milestones = [
-{ emoji: '🎯', text: 'Cleaned first real dataset — 10,000+ rows of NTA broadcast logs', date: 'Jan 2024' },
+{ emoji: '🎯', text: 'Cleaned first real dataset with 10,000+ rows of NTA broadcast logs', date: 'Jan 2024' },
 { emoji: '⚡', text: 'Automated Excel reports saving 3 hours/week at Afrilance', date: 'Mar 2024' },
 { emoji: '🏆', text: 'Built first SQL pipeline analyzing INEC election data', date: 'Jun 2024' },
 { emoji: '🐍', text: 'Wrote first Python script to process CSV files end-to-end', date: 'Aug 2024' },
 { emoji: '📊', text: 'Created first data visualization dashboard for stakeholders', date: 'Oct 2024' },
-{ emoji: '🤖', text: 'Built Motor Failure Prediction API — 87% ROC-AUC with XGBoost', date: 'Mar 2025' },
-{ emoji: '🎯', text: 'Deployed Customer Churn Prediction API — 84.46% ROC-AUC with FastAPI', date: 'Apr 2025' },
+{ emoji: '🤖', text: 'Built Motor Failure Prediction API with 87% ROC-AUC using XGBoost', date: 'Mar 2025' },
+{ emoji: '🎯', text: 'Deployed Customer Churn Prediction API with 84.46% ROC-AUC using FastAPI', date: 'Apr 2025' },
 { emoji: '🚀', text: 'Containerized ML models with Docker for production deployment', date: 'May 2025' }];
 
 
@@ -250,7 +250,7 @@ export default function DataScienceContent() {
                 Learning Path
               </h1>
               <p className="mt-2 text-lg text-zinc-400 font-medium">
-                From Excel sheets to ML models — one commit at a time 🚀
+                From Excel sheets to ML models, one commit at a time 🚀
               </p>
             </div>
 
@@ -360,7 +360,7 @@ export default function DataScienceContent() {
           </div>
           <div>
             <h2 className="text-lg font-bold text-white">Learning Roadmap</h2>
-            <p className="text-xs text-zinc-500">My honest progress — no gatekeeping</p>
+            <p className="text-xs text-zinc-500">My honest progress. No gatekeeping.</p>
           </div>
         </div>
 
@@ -521,7 +521,7 @@ export default function DataScienceContent() {
           <span className="text-gradient-purple">Every dataset tells a story.</span>&rdquo;
         </blockquote>
         <p className="text-zinc-500 text-sm mb-6 max-w-md mx-auto">
-          I&apos;m Mgboh Fredrick — an engineer turned data enthusiast, learning in public, building
+          I&apos;m Mgboh Fredrick, an engineer turned data enthusiast, learning in public, building
           real things, and enjoying every step of the journey.
         </p>
         <div className="flex items-center justify-center gap-3 flex-wrap">

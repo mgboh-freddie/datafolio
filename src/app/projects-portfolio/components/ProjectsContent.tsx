@@ -160,7 +160,7 @@ const projects: Project[] = [
   },
   {
     title: 'Data Preprocessing for ML Tasks',
-    description: 'Cleaned and standardized large datasets for machine learning tasks — removing duplicates, correcting formats, and preparing analysis-ready data.',
+    description: 'Cleaned and standardized large datasets for machine learning tasks: removing duplicates, correcting formats, and preparing analysis-ready data.',
     longDescription: 'Cleaned and standardized large CSV datasets using pandas, reducing inconsistencies and missing values. Automated Excel cleaning workflows to reduce manual processing time. Removed duplicates, corrected formats, and validated thousands of records. Prepared analysis-ready datasets for reporting and machine learning tasks, ensuring high data quality throughout the pipeline.',
     domain: 'Data Cleaning',
     type: 'Data Preprocessing',
@@ -277,13 +277,13 @@ export default function ProjectsContent() {
           <div className="mb-6 p-4 rounded-xl bg-zinc-950/60 border border-zinc-800">
             <p className="text-sm text-zinc-300 leading-relaxed">
               I didn&apos;t start as a data scientist. I started as a curious engineer who kept asking{' '}
-              <span className="text-cyan-400 font-medium">&quot;why does this data look so messy?&quot;</span> — and then
+              <span className="text-cyan-400 font-medium">&quot;why does this data look so messy?&quot;</span> and then
               decided to fix it. From cleaning spreadsheets at 2am to writing my first pandas script, every project here
               represents a real step forward. No bootcamp shortcuts. No fancy degree in data science. Just{' '}
               <span className="text-emerald-400 font-medium">raw curiosity, late nights, and a lot of Stack Overflow.</span>
             </p>
             <p className="text-sm text-zinc-400 leading-relaxed mt-2">
-              If you&apos;re also a noob on this journey — you&apos;re not alone. The projects below are proof that
+              If you&apos;re also a noob on this journey, you&apos;re not alone. The projects below are proof that
               you don&apos;t need to be an expert to start. You just need to{' '}
               <span className="text-amber-400 font-medium">start.</span>
             </p>
@@ -316,7 +316,7 @@ export default function ProjectsContent() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-white">Projects Portfolio</h1>
         <p className="text-sm text-zinc-400 mt-1">
-          {projects.length} projects — data cleaning, analysis, automation, and ICT engineering
+          {projects.length} projects covering data cleaning, analysis, automation, and ICT engineering
         </p>
       </div>
 

@@ -37,7 +37,7 @@ const timelineItems = [
   {
     date: 'Present',
     title: 'Data Cleaning & Analytics Specialist',
-    subtitle: 'Afrilance — Software Engineering',
+    subtitle: 'Afrilance, Software Engineering',
     description:
       'Improved software development efficiency by reducing processing time and manual workload by approximately 30%. Implemented standardized data validation processes, automated data workflows using Python and SQL, and enhanced cross-functional project coordination. Collaborated with developers and product stakeholders to plan and deploy scalable software solutions.',
     tags: ['Python', 'SQL', 'Data Validation', 'Automation', 'Afrilance'],
@@ -140,7 +140,7 @@ export default function AboutContent() {
             <div className="space-y-2 mb-5">
               <div className="flex items-center gap-2 text-xs text-zinc-400">
                 <MapPin size={13} className="text-zinc-500" />
-                Enugu, Nigeria — open to opportunities
+                Enugu, Nigeria, open to opportunities
               </div>
               <div className="flex items-center gap-2 text-xs text-zinc-400">
                 <Calendar size={13} className="text-zinc-500" />

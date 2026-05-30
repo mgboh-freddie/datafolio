@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'DataFolio — Data Science & Python Portfolio',
+  title: 'DataFolio: Data Science and Python Portfolio',
   description:
     'Portfolio of a data science rookie and junior Python developer showcasing ML models, data visualizations, and analytical projects.',
   icons: {

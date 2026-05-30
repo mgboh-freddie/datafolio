@@ -60,7 +60,7 @@ const skillCategories: SkillCategory[] = [
     accentColor: 'hsl(186 100% 60%)',
     overall: 65,
     tools: [
-      { name: 'SQL', months: 12, proficiency: 'Comfortable', note: 'SELECT, JOIN, GROUP BY, subqueries, data extraction' },
+      { name: 'SQL', months: 12, proficiency: 'Learning', note: 'SELECT, JOIN, GROUP BY, subqueries. Still learning window functions and optimization.' },
       { name: 'Data Entry Accuracy', months: 18, proficiency: 'Proficient', note: 'High accuracy data entry and record management' },
       { name: 'Database Management', months: 10, proficiency: 'Comfortable', note: 'Managing digital system records, routine validation' },
     ],
@@ -125,7 +125,7 @@ const radarData = [
 ];
 
 const learningRoadmap = [
-  { item: 'Advanced SQL — window functions & optimization', status: 'in-progress', eta: 'Apr 2026' },
+  { item: 'Advanced SQL with window functions and optimization', status: 'in-progress', eta: 'Apr 2026' },
   { item: 'Machine Learning with scikit-learn', status: 'in-progress', eta: 'May 2026' },
   { item: 'Data visualization with Matplotlib & Seaborn', status: 'planned', eta: 'Jun 2026' },
   { item: 'Cloud data tools (BigQuery, AWS S3)', status: 'planned', eta: 'Jul 2026' },
@@ -172,7 +172,7 @@ export default function SkillsContent() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-white">Skills &amp; Technologies</h1>
         <p className="text-sm text-zinc-400 mt-1">
-          Honest proficiency levels with context — not inflated skill bars
+          Honest proficiency levels with context. No inflated skill bars.
         </p>
       </div>
 
@@ -291,7 +291,7 @@ export default function SkillsContent() {
 
           {/* Experience by Tool Chart */}
           <div className="bg-zinc-900 rounded-xl border border-zinc-800 p-6">
-            <h2 className="text-sm font-semibold text-white mb-4">Months of Experience — Top Tools</h2>
+            <h2 className="text-sm font-semibold text-white mb-4">Months of Experience with Top Tools</h2>
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={topToolsData} margin={{ top: 0, right: 5, left: -25, bottom: 0 }}>
                 <CartesianGrid stroke="hsl(240 6% 14%)" strokeDasharray="3 3" />
