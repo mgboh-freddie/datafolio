@@ -259,6 +259,7 @@ export default function DataScienceContent() {
               production-grade ML APIs. Specialized in XGBoost models with 87% accuracy, probability calibration,
               and containerized deployments. Every dataset is a puzzle, and I love solving them. This page documents my
               honest, messy, wonderful journey from data cleaning to machine learning.
+            </p>
 
             <div className="flex flex-wrap gap-3 animate-stagger-4">
               <Link
